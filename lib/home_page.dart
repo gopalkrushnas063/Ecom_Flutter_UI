@@ -35,20 +35,16 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: Column(
           children: [
-            const Row(
+             Row(
               children: [
                 Padding(
-                  padding: EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(20.0),
                   child: Text(
                     'Shoe\nCollection',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Loto',
-                      fontSize: 35,
-                    ),
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
                 ),
-                Expanded(
+                const Expanded(
                   child: TextField(
                     decoration: InputDecoration(
                       hintText: 'Search',
