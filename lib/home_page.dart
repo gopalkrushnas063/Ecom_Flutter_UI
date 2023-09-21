@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             const Row(
               children: [
-                const Padding(
+                Padding(
                   padding: EdgeInsets.all(20.0),
                   child: Text(
                     'Shoe\nCollection',
@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                const Expanded(
+                Expanded(
                   child: TextField(
                     decoration: InputDecoration(
                       hintText: 'Search',
@@ -68,12 +68,14 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.symmetric(horizontal: 8.0),
                     child: GestureDetector(
                       onTap: () {
-                        selectedFilter = filter;
+                        setState(() {
+                          selectedFilter = filter;
+                        });
                       },
                       child: Chip(
                         backgroundColor: selectedFilter == filter
                             ? Theme.of(context).colorScheme.primary
-                            : Color.fromRGBO(245, 247, 249, 1),
+                            : const Color.fromRGBO(245, 247, 249, 1),
                         side: const BorderSide(
                             color: Color.fromRGBO(245, 247, 249, 1)),
                         label: Text(filter),
