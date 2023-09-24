@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 
 
-class CartPage extends StatelessWidget {
+class  extends StatelessWidget {
   const CartPage({super.key});
 
   @override
