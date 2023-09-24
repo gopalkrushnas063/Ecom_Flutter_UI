@@ -101,7 +101,13 @@ class _ProductListState extends State<ProductList> {
                 final product = products[index];
                 return GestureDetector(
                   onTap: () {
-                    // Navigator.of(context).push();
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return ProductDetailsPage(product: product);
+                        },
+                      ),
+                    );
                   },
                   child: ProductCard(
                     title: product['title'] as String,
